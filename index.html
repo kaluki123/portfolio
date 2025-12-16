@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Portfolio</title>
+    <meta
+      name="description"
+      content="Information Technology portfolio showcasing skills, education, and projects."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo-area">
+        <span class="logo-mark">IT</span>
+        <span class="logo-text">Portfolio</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode">
+          <span class="theme-icon">●</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home / Hero -->
+      <section id="home" class="section hero" aria-label="Introduction">
+        <div class="hero-content">
+          <p class="hero-tagline" id="hero-tagline"></p>
+          <h1 id="hero-name"></h1>
+          <p class="hero-subtitle" id="hero-subtitle"></p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+            <a href="assets/cv.pdf" class="btn subtle" download id="cv-button">Download CV</a>
+          </div>
+          <div class="hero-meta">
+            <span id="hero-location"></span>
+            <span aria-hidden="true">•</span>
+            <span id="hero-role"></span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="profile.jpg.jpg" alt="Profile photo" id="hero-photo" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section section-alt">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <p>A quick overview of who I am and where I'm headed.</p>
+        </div>
+        <div class="section-body about-grid">
+          <article>
+            <h3>Bio</h3>
+            <p id="about-bio"></p>
+          </article>
+          <article>
+            <h3>Education</h3>
+            <ul id="about-education" class="timeline"></ul>
+          </article>
+          <article>
+            <h3>Career Goals</h3>
+            <p id="about-goals"></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>Core technical skills and tools I work with.</p>
+        </div>
+        <div class="section-body skills-grid" id="skills-list"></div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section section-alt">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Practical examples of how I apply my skills.</p>
+        </div>
+        <div class="section-body projects-grid" id="projects-list"></div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <p>Attachments, internships, and relevant professional experience.</p>
+        </div>
+        <div class="section-body experience-list" id="experience-list"></div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog" class="section section-alt">
+        <div class="section-header">
+          <h2>Blog & Guides</h2>
+          <p>Beginner-friendly notes, tips, and tutorials from my learning journey.</p>
+        </div>
+        <div class="section-body blog-list" id="blog-list">
+          <!-- Blog posts will be loaded here -->
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Reach out for internship opportunities, collaborations, or questions.</p>
+        </div>
+        <div class="section-body contact-grid">
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formspree.io/f/your-form-id"
+            method="POST"
+          >
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn primary full-width">Send Message</button>
+            <p class="form-note">
+              This form uses Formspree. Replace the action URL with your own endpoint if needed.
+            </p>
+          </form>
+
+          <div class="contact-details">
+            <h3>Connect</h3>
+            <ul class="contact-links" id="contact-links"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="footer-text"></p>
+    </footer>
+
+    <script src="content/site-content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
